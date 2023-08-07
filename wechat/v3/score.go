@@ -254,9 +254,8 @@ func (c *ClientV3) V3ScoreOrderQuery(ctx context.Context, orderNoType OrderNoTyp
 // V3ScoreOrderPartnerQuery 服务商模式查询支付分订单
 // Code = 0 is success
 // 微信文档：https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_2.shtml
-func (c *ClientV3) V3ScoreOrderPartnerQuery(ctx context.Context, orderNoType OrderNoType, appid, orderNo, serviceid, subMchid string) (*ScoreOrderPartnerQueryRsp, error) {
+func (c *ClientV3) V3ScoreOrderPartnerQuery(ctx context.Context, orderNoType OrderNoType, orderNo, serviceid, subMchid string) (*ScoreOrderPartnerQueryRsp, error) {
 	var query url.Values
-	query.Set("appid", appid)
 	query.Set("service_id", serviceid)
 	query.Set("sub_mchid", subMchid)
 	switch orderNoType {
