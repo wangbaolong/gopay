@@ -198,7 +198,7 @@ func (c *ClientV3) V3ScoreOrderPartnerCreate(ctx context.Context, bm gopay.BodyM
 	if err != nil {
 		return nil, err
 	}
-	res, si, bs, err := c.doProdPost(ctx, bm, v3ScoreOrderCreate, authorization)
+	res, si, bs, err := c.doProdPost(ctx, bm, v3ScoreOrderPartnerCreate, authorization)
 	if err != nil {
 		return nil, err
 	}
